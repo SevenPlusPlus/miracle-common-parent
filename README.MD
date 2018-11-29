@@ -4,12 +4,13 @@
 
 
 这是spring-boot项目的一个使用示例，tips：当多个dependencyManage指定的同一jar包版本冲突时，会优先先定义的。
+
 ``` python
 <dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.melot</groupId>
-				<artifactId>melot-common-dependencies</artifactId>
+				<groupId>com.miracle</groupId>
+				<artifactId>miracle-common-dependencies</artifactId>
 				<version>1.0.0</version>
 				<type>pom</type>
 				<scope>import</scope>
