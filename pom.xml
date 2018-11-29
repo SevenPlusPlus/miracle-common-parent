@@ -1,0 +1,232 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.miracle</groupId>
+	<artifactId>miracle-common-dependencies</artifactId>
+	<version>1.2.5</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<miracle-utils.version>1.0.6</miracle-utils.version>
+		<miracle-jedis.version>1.1.4</miracle-jedis.version>
+		<miracle-rpc.version>1.2.2</miracle-rpc.version>
+		<miracle-rpc.annotation.version>1.2.2</miracle-rpc.annotation.version>
+		<mybatis.version>3.4.5</mybatis.version>
+		<mybatis-spring.version>1.3.0</mybatis-spring.version>
+		<druid.version>1.0.20</druid.version>
+		<disconf-client.version>2.6.37</disconf-client.version>
+		<!-- <junit.version>4.11</junit.version> -->
+		<testng.version>6.8.8</testng.version>
+		<cglib.version>2.2.2</cglib.version>
+		<jedis.version>2.6.2</jedis.version>
+		<miracle.mq.client.version>2.0.4</miracle.mq.client.version>
+		<io.protostuff.vesion>1.6.0</io.protostuff.vesion>
+		<hession.version>4.0.38</hession.version>
+		<netty-all.version>4.0.30.Final</netty-all.version>
+		<common.pool2.version>2.4.2</common.pool2.version>
+
+		<miracle.jedis.spring.boot.starter.version>1.1.3</miracle.jedis.spring.boot.starter.version>
+		<miracle.rpc.spring.boot.starter.version>1.1.3</miracle.rpc.spring.boot.starter.version>
+		<spring.boot.starter.log4j.version>1.3.8.RELEASE</spring.boot.starter.log4j.version>
+		<miracle.log.version>1.0.4</miracle.log.version>
+
+		<ghost.version>1.0.0-FAKE</ghost.version>
+
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-log4j</artifactId>
+				<version>${spring.boot.starter.log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.miracle</groupId>
+				<artifactId>miracle-jedis-spring-boot-starter</artifactId>
+				<version>${miracle.jedis.spring.boot.starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.miracle</groupId>
+				<artifactId>miracle-rpc-spring-boot-starter</artifactId>
+				<version>${miracle.rpc.spring.boot.starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.miracle</groupId>
+				<artifactId>miracle-mq-spring-boot-starter</artifactId>
+				<version>${miracle.mq.spring.boot.starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.miracle</groupId>
+				<artifactId>miracle-mybatis-spring-boot-starter</artifactId>
+				<version>${miracle.mybatis.spring.boot.starter.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.miracle.common</groupId>
+				<artifactId>miracle-utils</artifactId>
+				<version>${miracle-utils.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.miracle.common</groupId>
+				<artifactId>miracle-jedis</artifactId>
+				<version>${miracle-jedis.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+				<version>${jedis.version}</version>
+			</dependency>
+
+			<!-- rpc version -->
+			<dependency>
+				<groupId>com.miracle.module</groupId>
+				<artifactId>miracle-rpc-core</artifactId>
+				<version>${miracle-rpc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.miracle.module</groupId>
+				<artifactId>miracle-rpc-config</artifactId>
+				<version>${miracle-rpc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.miracle.module</groupId>
+				<artifactId>miracle-rpc-annotation</artifactId>
+				<version>${miracle-rpc.annotation.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis-spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.baidu.disconf</groupId>
+				<artifactId>disconf-client-melot</artifactId>
+				<version>${disconf-client.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+			<!-- <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
+				<version>${junit.version}</version> <scope>test</scope> </dependency> -->
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib</artifactId>
+				<version>${cglib.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.testng</groupId>
+				<artifactId>testng</artifactId>
+				<version>${testng.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-all</artifactId>
+				<version>${netty-all.version}</version>
+			</dependency>
+			<!-- Protostuff -->
+			<dependency>
+				<groupId>io.protostuff</groupId>
+				<artifactId>protostuff-core</artifactId>
+				<version>${io.protostuff.vesion}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.protostuff</groupId>
+				<artifactId>protostuff-runtime</artifactId>
+				<version>${io.protostuff.vesion}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.caucho</groupId>
+				<artifactId>hessian</artifactId>
+				<version>${hession.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-pool2</artifactId>
+				<version>${common.pool2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.miracle.common</groupId>
+				<artifactId>miracle-mq-client</artifactId>
+				<version>${miracle.mq.client.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.miracle.common</groupId>
+				<artifactId>miracle-log</artifactId>
+				<version>${miracle.log.version}</version>
+			</dependency>
+			
+			<!-- ghost jar to exclude -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-dao</artifactId>
+				<version>${ghost.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-logging</artifactId>
+				<version>${ghost.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>oracle</groupId>
+				<artifactId>ojdbc14</artifactId>
+				<version>${ghost.version}</version>
+			</dependency>
+			<dependency>
+				<artifactId>log4j</artifactId>
+				<groupId>log4j</groupId>
+				<version>${ghost.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${ghost.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
